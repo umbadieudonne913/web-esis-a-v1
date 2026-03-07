@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-esis-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-esis
+  template:
+    metadata:
+      labels:
+        app: web-esis
+    spec:
+      containers:
+      - name: web-esis
+        image: umbadieudonne913/web-esis:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-esis-service
+spec:
+  selector:
+    app: web-esis
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
