@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: web-esis-app
 spec:
-  replicas: 1
+  replicas: 1 
   selector:
     matchLabels:
       app: web-esis
