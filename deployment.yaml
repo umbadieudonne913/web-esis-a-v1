@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web-esis
-        image: umbadieudonne913/web-udbl:latest   
+        image: nginx:latest   
         ports:
         - containerPort: 80
 ---
