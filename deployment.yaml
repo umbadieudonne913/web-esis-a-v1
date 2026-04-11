@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: web-esis
+        app: web-esis 
     spec:
       containers:
       - name: web-esis
