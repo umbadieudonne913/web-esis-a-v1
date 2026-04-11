@@ -6,11 +6,11 @@ spec:
   replicas: 1 
   selector:
     matchLabels:
-      app: web-esis 
+      app: web-esis
   template:
     metadata:
       labels:
-        app: web-esis 
+        app: web-esis
     spec:
       containers:
       - name: web-esis
